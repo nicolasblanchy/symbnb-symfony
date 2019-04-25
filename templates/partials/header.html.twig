@@ -1,10 +1,9 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{{ path('homepage') }}">SymBNB</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <button aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarColor03" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -15,9 +14,29 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a href="#">Mon compte !</a>        
-            </li>
+            {% if app.user %}
+                <li class="nav-item droptdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="accountDropdownLink">
+                        <img src="{{app.user.picture}}" class="avatar avatar-mini" alt="Avatar de {{app.user.fullName}}">
+                        {{app.user.fullName}}
+                    </a>
+                    <div aria-labelledby="accountDropdownLink" class="dropdown-menu dropdown-menu-right">
+                        <a href="{{ path('ads_create') }}" class="dropdown-item">Créer une annonce</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="{{ path('account_index') }}" class="dropdown-item">Mon compte</a>
+                        <a href="{{ path('account_profile') }}" class="dropdown-item">Modifier mon profil</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="{{ path('account_logout') }}" class="dropdown-item">Déconnexion</a>
+                    </div>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{{ path('account_register') }}" class="nav-link">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('account_login') }}" class="nav-link">Connexion</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
@@ -31,5 +50,3 @@
         </div>
     </div>
 {% endfor %}
-
- 
