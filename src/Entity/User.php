@@ -94,6 +94,11 @@ class User implements UserInterface
      */
     private $bookings;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Comment", mappedBy="author")
+     */
+    private $yes;
+
     public function getFullName(){
         return "{$this->firstName} {$this->lastName}";
     }
@@ -118,6 +123,7 @@ class User implements UserInterface
         $this->ads = new ArrayCollection();
         $this->userRoles = new ArrayCollection();
         $this->bookings = new ArrayCollection();
+        $this->yes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -328,6 +334,37 @@ class User implements UserInterface
             // set the owning side to null (unless already changed)
             if ($booking->getBooker() === $this) {
                 $booking->setBooker(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Comment[]
+     */
+    public function getYes(): Collection
+    {
+        return $this->yes;
+    }
+
+    public function addYe(Comment $ye): self
+    {
+        if (!$this->yes->contains($ye)) {
+            $this->yes[] = $ye;
+            $ye->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeYe(Comment $ye): self
+    {
+        if ($this->yes->contains($ye)) {
+            $this->yes->removeElement($ye);
+            // set the owning side to null (unless already changed)
+            if ($ye->getAuthor() === $this) {
+                $ye->setAuthor(null);
             }
         }
 
