@@ -17,8 +17,7 @@ class AdminCommentType extends ApplicationType
             'label' => "Contenu du commentaire",
             'attr' => [
                 'placeholder' => "Modifier : corrigez le contenu du commentaire !"]
-            ])
-        ;
+        ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
