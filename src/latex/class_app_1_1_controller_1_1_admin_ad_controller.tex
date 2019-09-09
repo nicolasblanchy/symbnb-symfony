@@ -1,0 +1,71 @@
+\hypertarget{class_app_1_1_controller_1_1_admin_ad_controller}{}\section{Admin\+Ad\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_admin_ad_controller}\index{AdminAdController@{AdminAdController}}
+Inheritance diagram for Admin\+Ad\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_admin_ad_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_ad_controller_af2235ea6bb1c733202af121331b34e05}{index}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_ad_repository}{Ad\+Repository}} \$repo, \$page, \mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service}{Pagination\+Service}} \$pagination)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_ad_controller_a2d0b3cb3e83150dd16ff78aa9b5bdc78}{edit}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}} \$ad, Request \$request, Object\+Manager \$manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_ad_controller_a1fd28d9ca7903c3b1cff914b9c4fdb72}{delete}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}} \$ad, Object\+Manager \$manager)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_ad_controller_a1fd28d9ca7903c3b1cff914b9c4fdb72}\label{class_app_1_1_controller_1_1_admin_ad_controller_a1fd28d9ca7903c3b1cff914b9c4fdb72}} 
+\index{AdminAdController@{AdminAdController}!delete@{delete}}
+\index{delete@{delete}!AdminAdController@{AdminAdController}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}}}]{\$ad,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet de supprimer une annonce
+
+@\+Route(\char`\"{}/admin/ads/\{id\}/delete\char`\"{}, name=\char`\"{}admin\+\_\+ads\+\_\+delete\char`\"{})
+
+
+\begin{DoxyParams}[1]{Parameters}
+Ad & {\em \$ad} & \\
+\hline
+Object\+Manager & {\em \$manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_ad_controller_a2d0b3cb3e83150dd16ff78aa9b5bdc78}\label{class_app_1_1_controller_1_1_admin_ad_controller_a2d0b3cb3e83150dd16ff78aa9b5bdc78}} 
+\index{AdminAdController@{AdminAdController}!edit@{edit}}
+\index{edit@{edit}!AdminAdController@{AdminAdController}}
+\subsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}}}]{\$ad,  }\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher le formulaire d\textquotesingle{}édition
+
+@\+Route(\char`\"{}/admin/ads/\{id\}/edit\char`\"{}, name=\char`\"{}admin\+\_\+ads\+\_\+edit\char`\"{})
+
+
+\begin{DoxyParams}[1]{Parameters}
+Ad & {\em \$ad} & \\
+\hline
+Object\+Manager & {\em \$manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_ad_controller_af2235ea6bb1c733202af121331b34e05}\label{class_app_1_1_controller_1_1_admin_ad_controller_af2235ea6bb1c733202af121331b34e05}} 
+\index{AdminAdController@{AdminAdController}!index@{index}}
+\index{index@{index}!AdminAdController@{AdminAdController}}
+\subsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_ad_repository}{Ad\+Repository}}}]{\$repo,  }\item[{}]{\$page,  }\item[{\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service}{Pagination\+Service}}}]{\$pagination }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/admin/ads/\{page$<$\textbackslash{}d+$>$?1\}\char`\"{}, name=\char`\"{}admin\+\_\+ads\+\_\+index\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controller/\mbox{\hyperlink{_admin_ad_controller_8php}{Admin\+Ad\+Controller.\+php}}\end{DoxyCompactItemize}

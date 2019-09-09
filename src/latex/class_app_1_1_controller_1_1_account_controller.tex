@@ -1,0 +1,124 @@
+\hypertarget{class_app_1_1_controller_1_1_account_controller}{}\section{Account\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_account_controller}\index{AccountController@{AccountController}}
+Inheritance diagram for Account\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_account_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_account_controller_a8450f41ecb91498fc9e3bce1d9d65ab9}{login}} (Authentication\+Utils \$utils)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_account_controller_a082405d89acd6835c3a7c7a08a7adbab}{logout}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_account_controller_a90ecc2d541bdc4c5178f2d0bb48899e5}{register}} (Request \$request, Object\+Manager \$manager, User\+Password\+Encoder\+Interface \$encoder)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_account_controller_ab03aece09ce75dc5cf354f4dae008dd7}{profile}} (Request \$request, Object\+Manager \$manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_account_controller_a359d94aeff6cd7be80cd365c9300bd37}{update\+Password}} (Request \$request, Object\+Manager \$manager, User\+Password\+Encoder\+Interface \$encoder)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_account_controller_ac7254446c02ace98cda87a70e2a2e429}{my\+Account}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_account_controller_a0f99f07a00cb13e77cd7aa42d1ee5b43}{bookings}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_account_controller_a0f99f07a00cb13e77cd7aa42d1ee5b43}\label{class_app_1_1_controller_1_1_account_controller_a0f99f07a00cb13e77cd7aa42d1ee5b43}} 
+\index{AccountController@{AccountController}!bookings@{bookings}}
+\index{bookings@{bookings}!AccountController@{AccountController}}
+\subsubsection{\texorpdfstring{bookings()}{bookings()}}
+{\footnotesize\ttfamily bookings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher la liste des réservations faites par l\textquotesingle{}utilisateur
+
+@\+Route(\char`\"{}/account/bookings\char`\"{}, name=\char`\"{}account\+\_\+bookings\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Reponse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_account_controller_a8450f41ecb91498fc9e3bce1d9d65ab9}\label{class_app_1_1_controller_1_1_account_controller_a8450f41ecb91498fc9e3bce1d9d65ab9}} 
+\index{AccountController@{AccountController}!login@{login}}
+\index{login@{login}!AccountController@{AccountController}}
+\subsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily login (\begin{DoxyParamCaption}\item[{Authentication\+Utils}]{\$utils }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher et de gérer le formulaire de connexion
+
+@\+Route(\char`\"{}/login\char`\"{}, name=\char`\"{}account\+\_\+login\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_account_controller_a082405d89acd6835c3a7c7a08a7adbab}\label{class_app_1_1_controller_1_1_account_controller_a082405d89acd6835c3a7c7a08a7adbab}} 
+\index{AccountController@{AccountController}!logout@{logout}}
+\index{logout@{logout}!AccountController@{AccountController}}
+\subsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de se déconnecter
+
+@\+Route(\char`\"{}/logout\char`\"{}, name=\char`\"{}account\+\_\+logout\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_account_controller_ac7254446c02ace98cda87a70e2a2e429}\label{class_app_1_1_controller_1_1_account_controller_ac7254446c02ace98cda87a70e2a2e429}} 
+\index{AccountController@{AccountController}!myAccount@{myAccount}}
+\index{myAccount@{myAccount}!AccountController@{AccountController}}
+\subsubsection{\texorpdfstring{myAccount()}{myAccount()}}
+{\footnotesize\ttfamily my\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher le profil de l\textquotesingle{}utilisateur connecté
+
+@\+Route(\char`\"{}/account\char`\"{}, name=\char`\"{}account\+\_\+index\char`\"{}) @\+Is\+Granted(\char`\"{}\+R\+O\+L\+E\+\_\+\+U\+S\+E\+R\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_account_controller_ab03aece09ce75dc5cf354f4dae008dd7}\label{class_app_1_1_controller_1_1_account_controller_ab03aece09ce75dc5cf354f4dae008dd7}} 
+\index{AccountController@{AccountController}!profile@{profile}}
+\index{profile@{profile}!AccountController@{AccountController}}
+\subsubsection{\texorpdfstring{profile()}{profile()}}
+{\footnotesize\ttfamily profile (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher et de traiter le formulaire de modification de profile
+
+@\+Route(\char`\"{}/account/profile\char`\"{}, name=\char`\"{}account\+\_\+profile\char`\"{}) @\+Is\+Granted(\char`\"{}\+R\+O\+L\+E\+\_\+\+U\+S\+E\+R\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_account_controller_a90ecc2d541bdc4c5178f2d0bb48899e5}\label{class_app_1_1_controller_1_1_account_controller_a90ecc2d541bdc4c5178f2d0bb48899e5}} 
+\index{AccountController@{AccountController}!register@{register}}
+\index{register@{register}!AccountController@{AccountController}}
+\subsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager,  }\item[{User\+Password\+Encoder\+Interface}]{\$encoder }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher le formulaire d\textquotesingle{}inscription
+
+@\+Route(\char`\"{}/register\char`\"{}, name=\char`\"{}account\+\_\+register\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_account_controller_a359d94aeff6cd7be80cd365c9300bd37}\label{class_app_1_1_controller_1_1_account_controller_a359d94aeff6cd7be80cd365c9300bd37}} 
+\index{AccountController@{AccountController}!updatePassword@{updatePassword}}
+\index{updatePassword@{updatePassword}!AccountController@{AccountController}}
+\subsubsection{\texorpdfstring{updatePassword()}{updatePassword()}}
+{\footnotesize\ttfamily update\+Password (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager,  }\item[{User\+Password\+Encoder\+Interface}]{\$encoder }\end{DoxyParamCaption})}
+
+Permet de modifier le mot de passe
+
+@\+Route(\char`\"{}/account/password-\/update\char`\"{}, name=\char`\"{}account\+\_\+password\char`\"{}) @\+Is\+Granted(\char`\"{}\+R\+O\+L\+E\+\_\+\+U\+S\+E\+R\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controller/\mbox{\hyperlink{_account_controller_8php}{Account\+Controller.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,96 @@
+\hypertarget{class_app_1_1_controller_1_1_ad_controller}{}\section{Ad\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_ad_controller}\index{AdController@{AdController}}
+Inheritance diagram for Ad\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_ad_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_ad_controller_af14e0bf9006c01621d25e389c3f94e28}{index}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_ad_repository}{Ad\+Repository}} \$repo)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_ad_controller_a98e82be5d980b9fddaef01ed97145c4d}{create}} (Request \$request, Object\+Manager \$manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_ad_controller_a2d0b3cb3e83150dd16ff78aa9b5bdc78}{edit}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}} \$ad, Request \$request, Object\+Manager \$manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_ad_controller_ac306f7bedbae8f6f8bb15bcc0ae9cd6c}{show}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}} \$ad)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_ad_controller_a1fd28d9ca7903c3b1cff914b9c4fdb72}{delete}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}} \$ad, Object\+Manager \$manager)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_ad_controller_a98e82be5d980b9fddaef01ed97145c4d}\label{class_app_1_1_controller_1_1_ad_controller_a98e82be5d980b9fddaef01ed97145c4d}} 
+\index{AdController@{AdController}!create@{create}}
+\index{create@{create}!AdController@{AdController}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily create (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet de créer une annonce
+
+@\+Route(\char`\"{}/ads/new\char`\"{}, name=\char`\"{}ads\+\_\+create\char`\"{})
+
+@\+Is\+Granted(\char`\"{}\+R\+O\+L\+E\+\_\+\+U\+S\+E\+R\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_ad_controller_a1fd28d9ca7903c3b1cff914b9c4fdb72}\label{class_app_1_1_controller_1_1_ad_controller_a1fd28d9ca7903c3b1cff914b9c4fdb72}} 
+\index{AdController@{AdController}!delete@{delete}}
+\index{delete@{delete}!AdController@{AdController}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}}}]{\$ad,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet de supprimer une annonce
+
+@\+Route(\char`\"{}/ads/\{slug\}/delete\char`\"{}, name=\char`\"{}ads\+\_\+delete\char`\"{}) @\+Security(\char`\"{}is\+\_\+granted(\textquotesingle{}\+R\+O\+L\+E\+\_\+\+U\+S\+E\+R\textquotesingle{}) and user == ad.\+get\+Author()\char`\"{}, message=\char`\"{}vous n\textquotesingle{}avez pas le droit d\textquotesingle{}accéder à cette ressource\char`\"{})
+
+
+\begin{DoxyParams}[1]{Parameters}
+Ad & {\em \$ad} & \\
+\hline
+Object\+Manager & {\em \$manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_ad_controller_a2d0b3cb3e83150dd16ff78aa9b5bdc78}\label{class_app_1_1_controller_1_1_ad_controller_a2d0b3cb3e83150dd16ff78aa9b5bdc78}} 
+\index{AdController@{AdController}!edit@{edit}}
+\index{edit@{edit}!AdController@{AdController}}
+\subsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}}}]{\$ad,  }\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}éditer une annonce en afichant le formulaire d\textquotesingle{}édition prérempli
+
+@route(\char`\"{}/ads/\{slug\}/edit\char`\"{}, name=\char`\"{}ads\+\_\+edit\char`\"{}) @\+Security(\char`\"{}is\+\_\+granted(\textquotesingle{}\+R\+O\+L\+E\+\_\+\+U\+S\+E\+R\textquotesingle{}) and user === ad.\+get\+Author()\char`\"{}, message=\char`\"{}\+Cette annonce ne vous appartient pas, vous ne pouvez pas la modifier !\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_ad_controller_af14e0bf9006c01621d25e389c3f94e28}\label{class_app_1_1_controller_1_1_ad_controller_af14e0bf9006c01621d25e389c3f94e28}} 
+\index{AdController@{AdController}!index@{index}}
+\index{index@{index}!AdController@{AdController}}
+\subsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_ad_repository}{Ad\+Repository}}}]{\$repo }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/ads\char`\"{}, name=\char`\"{}ads\+\_\+index\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_ad_controller_ac306f7bedbae8f6f8bb15bcc0ae9cd6c}\label{class_app_1_1_controller_1_1_ad_controller_ac306f7bedbae8f6f8bb15bcc0ae9cd6c}} 
+\index{AdController@{AdController}!show@{show}}
+\index{show@{show}!AdController@{AdController}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}}}]{\$ad }\end{DoxyParamCaption})}
+
+Montrer une annonce
+
+@\+Route(\char`\"{}/ads/\{slug\}\char`\"{}, name=\char`\"{}ads\+\_\+show\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controller/\mbox{\hyperlink{_ad_controller_8php}{Ad\+Controller.\+php}}\end{DoxyCompactItemize}

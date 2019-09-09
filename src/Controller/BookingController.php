@@ -37,7 +37,7 @@ class BookingController extends AbstractController
             if(!$booking->isBookableDates()){
                 $this->addFlash(
                     'warning',
-                    "Les dates que vous avez choisi ne peuvent oas être réservées : elles sont déjà prises."
+                    "Les dates que vous avez choisi ne peuvent pas être réservées : elles sont déjà prises."
                 );
             }else{
                 // sinon enregistrement et redirection

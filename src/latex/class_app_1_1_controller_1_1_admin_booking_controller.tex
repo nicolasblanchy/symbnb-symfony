@@ -1,0 +1,62 @@
+\hypertarget{class_app_1_1_controller_1_1_admin_booking_controller}{}\section{Admin\+Booking\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_admin_booking_controller}\index{AdminBookingController@{AdminBookingController}}
+Inheritance diagram for Admin\+Booking\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_admin_booking_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_booking_controller_a1616199d1904278a6c2daaf622b766a9}{index}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_booking_repository}{Booking\+Repository}} \$repo, \$page, \mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service}{Pagination\+Service}} \$pagination)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_booking_controller_abab509bdef8d07f6d4e9678b7bdc7aa5}{edit}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_booking}{Booking}} \$booking, Request \$request, Object\+Manager \$manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_booking_controller_a2a52fb92d16ac69d8c6848177a7a314a}{delete}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_booking}{Booking}} \$booking, Object\+Manager \$manager)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_booking_controller_a2a52fb92d16ac69d8c6848177a7a314a}\label{class_app_1_1_controller_1_1_admin_booking_controller_a2a52fb92d16ac69d8c6848177a7a314a}} 
+\index{AdminBookingController@{AdminBookingController}!delete@{delete}}
+\index{delete@{delete}!AdminBookingController@{AdminBookingController}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_booking}{Booking}}}]{\$booking,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet de supprimer une réservation
+
+@\+Route(\char`\"{}/admin/bookings/\{id\}/delete\char`\"{}, name=\char`\"{}admin\+\_\+booking\+\_\+delete\char`\"{})
+
+
+\begin{DoxyParams}[1]{Parameters}
+Booking & {\em \$booking} & \\
+\hline
+Object\+Manager & {\em \$manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_booking_controller_abab509bdef8d07f6d4e9678b7bdc7aa5}\label{class_app_1_1_controller_1_1_admin_booking_controller_abab509bdef8d07f6d4e9678b7bdc7aa5}} 
+\index{AdminBookingController@{AdminBookingController}!edit@{edit}}
+\index{edit@{edit}!AdminBookingController@{AdminBookingController}}
+\subsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_booking}{Booking}}}]{\$booking,  }\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}éditer une réservation @\+Route(\char`\"{}/admin/bookings/\{id\}/edit\char`\"{}, name=\char`\"{}admin\+\_\+booking\+\_\+edit\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_booking_controller_a1616199d1904278a6c2daaf622b766a9}\label{class_app_1_1_controller_1_1_admin_booking_controller_a1616199d1904278a6c2daaf622b766a9}} 
+\index{AdminBookingController@{AdminBookingController}!index@{index}}
+\index{index@{index}!AdminBookingController@{AdminBookingController}}
+\subsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_booking_repository}{Booking\+Repository}}}]{\$repo,  }\item[{}]{\$page,  }\item[{\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service}{Pagination\+Service}}}]{\$pagination }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/admin/bookings/\{page$<$\textbackslash{}d+$>$?1\}\char`\"{}, name=\char`\"{}admin\+\_\+booking\+\_\+index\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controller/\mbox{\hyperlink{_admin_booking_controller_8php}{Admin\+Booking\+Controller.\+php}}\end{DoxyCompactItemize}

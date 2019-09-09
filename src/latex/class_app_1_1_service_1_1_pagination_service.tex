@@ -1,0 +1,265 @@
+\hypertarget{class_app_1_1_service_1_1_pagination_service}{}\section{Pagination\+Service Class Reference}
+\label{class_app_1_1_service_1_1_pagination_service}\index{PaginationService@{PaginationService}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_acbfb54ef94a6d7490713abfa9506cdb5}{\+\_\+\+\_\+construct}} (Object\+Manager \$manager, Environment \$twig, Request\+Stack \$request, string \$template\+Path)
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a0b9b6e6acd4a839fc7c2f26f96b5cfa8}{display}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a9613a9ee3ec2d3c253b6cacde84fb992}{get\+Pages}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_aa78aeb4cac1dc48ba37c566da928e3a0}{set\+Page}} (int \$page)
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a12a549e25239c9219e66322cf6a1be68}{get\+Page}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a50eb9e1116dd170465b21c7664ae17ec}{set\+Limit}} (int \$limit)
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_adc86593a522f6adc4e47b02b97a6f8d0}{get\+Limit}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a52860badb20cab10adff381d94c20b97}{set\+Entity\+Class}} (string \$entity\+Class)
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a82bf7d9129d40bb5d953f2b08210fccc}{get\+Entity\+Class}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a9604a19249a87f4ff96ae3dde0d909e0}{set\+Template\+Path}} (string \$template\+Path)
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_a4faced39e5a4a69805a7d3121b191ad1}{get\+Template\+Path}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_adc73c91e5002b38702ea81bd294e71a6}{set\+Route}} (string \$route)
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service_ac01e8ae14a990fb74fc2e8b0fc1bdb63}{get\+Route}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de pagination qui extrait toute notion de calcul et de récupération de données de nos controllers
+
+Elle nécessite après instanciation qu\textquotesingle{}on lui passe l\textquotesingle{}entité sur laquelle on souhaite travailler 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_acbfb54ef94a6d7490713abfa9506cdb5}\label{class_app_1_1_service_1_1_pagination_service_acbfb54ef94a6d7490713abfa9506cdb5}} 
+\index{PaginationService@{PaginationService}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Object\+Manager}]{\$manager,  }\item[{Environment}]{\$twig,  }\item[{Request\+Stack}]{\$request,  }\item[{string}]{\$template\+Path }\end{DoxyParamCaption})}
+
+Constructeur du service de pagination qui sera appelé par Symfony
+
+N\textquotesingle{}oubliez pas de configurer votre fichier services.\+yaml afin que Symfony sache quelle valeur utiliser pour le \$template\+Path
+
+
+\begin{DoxyParams}[1]{Parameters}
+Object\+Manager & {\em \$manager} & \\
+\hline
+Environment & {\em \$twig} & \\
+\hline
+Request\+Stack & {\em \$request} & \\
+\hline
+string & {\em \$template\+Path} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a0b9b6e6acd4a839fc7c2f26f96b5cfa8}\label{class_app_1_1_service_1_1_pagination_service_a0b9b6e6acd4a839fc7c2f26f96b5cfa8}} 
+\index{PaginationService@{PaginationService}!display@{display}}
+\index{display@{display}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher le rendu de la navigation au sein d\textquotesingle{}un template twig !
+
+On se sert ici de notre moteur de rendu afin de compiler le template qui se trouve au chemin de notre propriété \$template\+Path, en lui passant les variables \+:
+\begin{DoxyItemize}
+\item page =$>$ La page actuelle sur laquelle on se trouve
+\item pages =$>$ le nombre total de pages qui existent
+\item route =$>$ le nom de la route à utiliser pour les liens de navigation
+\end{DoxyItemize}
+
+Attention \+: cette fonction ne retourne rien, elle affiche directement le rendu
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a81a67162a6288d78fc4c55283325f0b4}\label{class_app_1_1_service_1_1_pagination_service_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{PaginationService@{PaginationService}!getData@{getData}}
+\index{getData@{getData}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de récupérer les données paginées pour une entité spécifique
+
+Elle se sert de Doctrine afin de récupérer le repository pour l\textquotesingle{}entité spécifiée puis grâce au repository et à sa fonction find\+By() on récupère les données dans une certaine limite et en partant d\textquotesingle{}un offset
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & si la propriété \$entity\+Class n\textquotesingle{}est pas définie\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a82bf7d9129d40bb5d953f2b08210fccc}\label{class_app_1_1_service_1_1_pagination_service_a82bf7d9129d40bb5d953f2b08210fccc}} 
+\index{PaginationService@{PaginationService}!getEntityClass@{getEntityClass}}
+\index{getEntityClass@{getEntityClass}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{getEntityClass()}{getEntityClass()}}
+{\footnotesize\ttfamily get\+Entity\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de récupérer l\textquotesingle{}entité sur laquelle on est en train de paginer
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_adc86593a522f6adc4e47b02b97a6f8d0}\label{class_app_1_1_service_1_1_pagination_service_adc86593a522f6adc4e47b02b97a6f8d0}} 
+\index{PaginationService@{PaginationService}!getLimit@{getLimit}}
+\index{getLimit@{getLimit}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{getLimit()}{getLimit()}}
+{\footnotesize\ttfamily get\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de récupérer le nombre d\textquotesingle{}enregistrements qui seront renvoyés
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a12a549e25239c9219e66322cf6a1be68}\label{class_app_1_1_service_1_1_pagination_service_a12a549e25239c9219e66322cf6a1be68}} 
+\index{PaginationService@{PaginationService}!getPage@{getPage}}
+\index{getPage@{getPage}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{getPage()}{getPage()}}
+{\footnotesize\ttfamily get\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de récupérer la page qui est actuellement affichée
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a9613a9ee3ec2d3c253b6cacde84fb992}\label{class_app_1_1_service_1_1_pagination_service_a9613a9ee3ec2d3c253b6cacde84fb992}} 
+\index{PaginationService@{PaginationService}!getPages@{getPages}}
+\index{getPages@{getPages}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{getPages()}{getPages()}}
+{\footnotesize\ttfamily get\+Pages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de récupérer le nombre de pages qui existent sur une entité particulière
+
+Elle se sert de Doctrine pour récupérer le repository qui correspond à l\textquotesingle{}entité que l\textquotesingle{}on souhaite paginer (voir la propriété \$entity\+Class) puis elle trouve le nombre total d\textquotesingle{}enregistrements grâce à la fonction find\+All() du repository
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & si la propriété \$entity\+Class n\textquotesingle{}est pas configurée\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_ac01e8ae14a990fb74fc2e8b0fc1bdb63}\label{class_app_1_1_service_1_1_pagination_service_ac01e8ae14a990fb74fc2e8b0fc1bdb63}} 
+\index{PaginationService@{PaginationService}!getRoute@{getRoute}}
+\index{getRoute@{getRoute}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{getRoute()}{getRoute()}}
+{\footnotesize\ttfamily get\+Route (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de récupérer le nom de la route qui sera utilisé sur les liens de la navigation
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a4faced39e5a4a69805a7d3121b191ad1}\label{class_app_1_1_service_1_1_pagination_service_a4faced39e5a4a69805a7d3121b191ad1}} 
+\index{PaginationService@{PaginationService}!getTemplatePath@{getTemplatePath}}
+\index{getTemplatePath@{getTemplatePath}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{getTemplatePath()}{getTemplatePath()}}
+{\footnotesize\ttfamily get\+Template\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de récupérer le template\+Path actuellement utilisé
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a52860badb20cab10adff381d94c20b97}\label{class_app_1_1_service_1_1_pagination_service_a52860badb20cab10adff381d94c20b97}} 
+\index{PaginationService@{PaginationService}!setEntityClass@{setEntityClass}}
+\index{setEntityClass@{setEntityClass}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{setEntityClass()}{setEntityClass()}}
+{\footnotesize\ttfamily set\+Entity\+Class (\begin{DoxyParamCaption}\item[{string}]{\$entity\+Class }\end{DoxyParamCaption})}
+
+Permet de spécifier l\textquotesingle{}entité sur laquelle on souhaite paginer Par exemple \+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{namespace_app}{App}}\textbackslash{}\+Entity\textbackslash{}\+Ad\+::class
+\item \mbox{\hyperlink{namespace_app}{App}}\textbackslash{}\+Entity\textbackslash{}\+Comment\+::class
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Class} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a50eb9e1116dd170465b21c7664ae17ec}\label{class_app_1_1_service_1_1_pagination_service_a50eb9e1116dd170465b21c7664ae17ec}} 
+\index{PaginationService@{PaginationService}!setLimit@{setLimit}}
+\index{setLimit@{setLimit}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{setLimit()}{setLimit()}}
+{\footnotesize\ttfamily set\+Limit (\begin{DoxyParamCaption}\item[{int}]{\$limit }\end{DoxyParamCaption})}
+
+Permet de spécifier le nombre d\textquotesingle{}enregistrements que l\textquotesingle{}on souhaite obtenir !
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$limit} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_aa78aeb4cac1dc48ba37c566da928e3a0}\label{class_app_1_1_service_1_1_pagination_service_aa78aeb4cac1dc48ba37c566da928e3a0}} 
+\index{PaginationService@{PaginationService}!setPage@{setPage}}
+\index{setPage@{setPage}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{setPage()}{setPage()}}
+{\footnotesize\ttfamily set\+Page (\begin{DoxyParamCaption}\item[{int}]{\$page }\end{DoxyParamCaption})}
+
+Permet de spécifier la page que l\textquotesingle{}on souhaite afficher
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$page} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_adc73c91e5002b38702ea81bd294e71a6}\label{class_app_1_1_service_1_1_pagination_service_adc73c91e5002b38702ea81bd294e71a6}} 
+\index{PaginationService@{PaginationService}!setRoute@{setRoute}}
+\index{setRoute@{setRoute}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{setRoute()}{setRoute()}}
+{\footnotesize\ttfamily set\+Route (\begin{DoxyParamCaption}\item[{string}]{\$route }\end{DoxyParamCaption})}
+
+Permet de changer la route par défaut pour les liens de la navigation
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$route} & Le nom de la route à utiliser \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_service_1_1_pagination_service_a9604a19249a87f4ff96ae3dde0d909e0}\label{class_app_1_1_service_1_1_pagination_service_a9604a19249a87f4ff96ae3dde0d909e0}} 
+\index{PaginationService@{PaginationService}!setTemplatePath@{setTemplatePath}}
+\index{setTemplatePath@{setTemplatePath}!PaginationService@{PaginationService}}
+\subsubsection{\texorpdfstring{setTemplatePath()}{setTemplatePath()}}
+{\footnotesize\ttfamily set\+Template\+Path (\begin{DoxyParamCaption}\item[{string}]{\$template\+Path }\end{DoxyParamCaption})}
+
+Permet de choisir un template de pagination
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$template\+Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Service/\mbox{\hyperlink{_pagination_service_8php}{Pagination\+Service.\+php}}\end{DoxyCompactItemize}

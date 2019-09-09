@@ -1,0 +1,51 @@
+\hypertarget{class_app_1_1_controller_1_1_booking_controller}{}\section{Booking\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_booking_controller}\index{BookingController@{BookingController}}
+Inheritance diagram for Booking\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_booking_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_booking_controller_a98045dfae4fc7becca09bb478cd40476}{book}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}} \$ad, Request \$request, Object\+Manager \$manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_booking_controller_a897cc5638a1c995dadacbcc507c1ee63}{show}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_booking}{Booking}} \$booking, Request \$request, Object\+Manager \$manager)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_booking_controller_a98045dfae4fc7becca09bb478cd40476}\label{class_app_1_1_controller_1_1_booking_controller_a98045dfae4fc7becca09bb478cd40476}} 
+\index{BookingController@{BookingController}!book@{book}}
+\index{book@{book}!BookingController@{BookingController}}
+\subsubsection{\texorpdfstring{book()}{book()}}
+{\footnotesize\ttfamily book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_ad}{Ad}}}]{\$ad,  }\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/ads/\{slug\}/book\char`\"{}, name=\char`\"{}booking\+\_\+create\char`\"{}) @\+Is\+Granted(\char`\"{}\+R\+O\+L\+E\+\_\+\+U\+S\+E\+R\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_booking_controller_a897cc5638a1c995dadacbcc507c1ee63}\label{class_app_1_1_controller_1_1_booking_controller_a897cc5638a1c995dadacbcc507c1ee63}} 
+\index{BookingController@{BookingController}!show@{show}}
+\index{show@{show}!BookingController@{BookingController}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_booking}{Booking}}}]{\$booking,  }\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher la page d\textquotesingle{}une réservation
+
+@\+Route(\char`\"{}/booking/\{id\}\char`\"{}, name=\char`\"{}booking\+\_\+show\char`\"{})
+
+
+\begin{DoxyParams}[1]{Parameters}
+Booking & {\em \$booking} & \\
+\hline
+Request & {\em \$request} & \\
+\hline
+Object\+Manager & {\em \$manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controller/\mbox{\hyperlink{_booking_controller_8php}{Booking\+Controller.\+php}}\end{DoxyCompactItemize}

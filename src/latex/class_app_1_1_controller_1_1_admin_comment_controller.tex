@@ -1,0 +1,71 @@
+\hypertarget{class_app_1_1_controller_1_1_admin_comment_controller}{}\section{Admin\+Comment\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_admin_comment_controller}\index{AdminCommentController@{AdminCommentController}}
+Inheritance diagram for Admin\+Comment\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_admin_comment_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_comment_controller_a52c8d578a5ccf9d862b3a7846bd0e4c8}{index}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_comment_repository}{Comment\+Repository}} \$repo, \$page, \mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service}{Pagination\+Service}} \$pagination)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_comment_controller_abd246c5607054faeb10cff8f4c723c1f}{edit}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_comment}{Comment}} \$comment, Request \$request, Object\+Manager \$manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_comment_controller_ab43ca0b3f3245be6ffe1606f4d4d4dee}{delete}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_comment}{Comment}} \$comment, Object\+Manager \$manager)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_comment_controller_ab43ca0b3f3245be6ffe1606f4d4d4dee}\label{class_app_1_1_controller_1_1_admin_comment_controller_ab43ca0b3f3245be6ffe1606f4d4d4dee}} 
+\index{AdminCommentController@{AdminCommentController}!delete@{delete}}
+\index{delete@{delete}!AdminCommentController@{AdminCommentController}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_comment}{Comment}}}]{\$comment,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet de supprimer le commentaire d\textquotesingle{}une annonce
+
+@\+Route(\char`\"{}/admin/comments/\{id\}/delete\char`\"{}, name=\char`\"{}admin\+\_\+comments\+\_\+delete\char`\"{})
+
+
+\begin{DoxyParams}[1]{Parameters}
+Comment & {\em \$comment} & \\
+\hline
+Object\+Manager & {\em \$manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_comment_controller_abd246c5607054faeb10cff8f4c723c1f}\label{class_app_1_1_controller_1_1_admin_comment_controller_abd246c5607054faeb10cff8f4c723c1f}} 
+\index{AdminCommentController@{AdminCommentController}!edit@{edit}}
+\index{edit@{edit}!AdminCommentController@{AdminCommentController}}
+\subsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_comment}{Comment}}}]{\$comment,  }\item[{Request}]{\$request,  }\item[{Object\+Manager}]{\$manager }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}afficher le formulaire d\textquotesingle{}édition
+
+@\+Route(\char`\"{}/admin/comments/\{id\}/edit\char`\"{}, name=\char`\"{}admin\+\_\+comments\+\_\+edit\char`\"{})
+
+
+\begin{DoxyParams}[1]{Parameters}
+Comment & {\em \$comment} & \\
+\hline
+Object\+Manager & {\em \$manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_comment_controller_a52c8d578a5ccf9d862b3a7846bd0e4c8}\label{class_app_1_1_controller_1_1_admin_comment_controller_a52c8d578a5ccf9d862b3a7846bd0e4c8}} 
+\index{AdminCommentController@{AdminCommentController}!index@{index}}
+\index{index@{index}!AdminCommentController@{AdminCommentController}}
+\subsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_comment_repository}{Comment\+Repository}}}]{\$repo,  }\item[{}]{\$page,  }\item[{\mbox{\hyperlink{class_app_1_1_service_1_1_pagination_service}{Pagination\+Service}}}]{\$pagination }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/admin/comments/\{page$<$\textbackslash{}d+$>$?1\}\char`\"{}, name=\char`\"{}admin\+\_\+comments\+\_\+index\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controller/\mbox{\hyperlink{_admin_comment_controller_8php}{Admin\+Comment\+Controller.\+php}}\end{DoxyCompactItemize}
